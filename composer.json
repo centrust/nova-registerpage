@@ -1,0 +1,26 @@
+{
+    "name": "acvxqs/nova-registerpage",
+    "description": "A basic registration page for Laravel Nova 3",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Acvxqs\\NovaRegisterpage\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Acvxqs\\NovaRegisterpage\\RegisterpageServiceProvider"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "Sven Roelse",
+            "email": "acvxqs@icloud.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
