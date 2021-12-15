@@ -7,7 +7,7 @@
 <form
     class="bg-white shadow rounded-lg p-8 max-w-login mx-auto"
     method="POST"
-    action="{{ route('register') }}"
+    action="{{ route('nova.register') }}"
 >
     @csrf
 
