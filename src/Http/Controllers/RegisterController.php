@@ -8,6 +8,7 @@ use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Laravel\Nova\Nova;
 
 class RegisterController extends Controller
 {
@@ -25,13 +26,6 @@ class RegisterController extends Controller
     use RegistersUsers;
 
     /**
-     * Where to redirect users after registration.
-     *
-     * @var string
-     */
-    protected $redirectTo = Nova::path();
-
-    /**
      * Create a new controller instance.
      *
      * @return void
@@ -39,6 +33,16 @@ class RegisterController extends Controller
     public function __construct()
     {
         $this->middleware('guest');
+    }
+    
+     /**
+     * Get the post register redirect path.
+     *
+     * @return string
+     */
+    public function redirectTo()
+    {
+        return Nova::path();
     }
 
     public function showNovaRegisterpageForm()
