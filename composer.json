@@ -22,5 +22,7 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {}
+    "require": {
+        "laravel/nova": "^3.0",
+    },
 }
