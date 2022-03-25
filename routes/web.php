@@ -14,11 +14,13 @@ use Acvxqs\NovaRegisterpage\Http\Controllers\RegisterController;
 |
 */
 
-Route::domain(config('nova.domain', null))
-    ->middleware('web')
-    ->as('nova.')
-    ->prefix(Nova::path())
-    ->group(function () {
-        Route::get('register', [RegisterController::class, 'showNovaRegisterpageForm'])->name('register');
-        Route::post('register', [RegisterController::class, 'register']);
-});
+if (config('nova-registerpage.enabled') ?? true) {
+    Route::domain(config('nova.domain', null))
+        ->middleware('web')
+        ->as('nova.')
+        ->prefix(Nova::path())
+        ->group(function () {
+            Route::get('register', [RegisterController::class, 'showNovaRegisterpageForm'])->name('register');
+            Route::post('register', [RegisterController::class, 'register']);
+    });
+}
