@@ -29,6 +29,7 @@ class RegisterpageServiceProvider extends ServiceProvider
 
         $this->publishes([
             __DIR__ . '/../config/nova-registerpage.php' => config_path('nova-registerpage.php'),
+            __DIR__ . '/../resources/views/nova-registerpage' => base_path('resources/views/vendor/nova-registerpage'),
         ], 'nova-registerpage');
     }
 }
