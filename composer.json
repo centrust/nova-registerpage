@@ -2,6 +2,20 @@
     "name": "acvxqs/nova-registerpage",
     "description": "A basic registration page for Laravel Nova 3",
     "type": "library",
+    "keywords": [
+        "laravel",
+        "nova",
+        "register",
+        "registration"
+    ],
+    "authors": [
+        {
+            "name": "Sven Roelse",
+            "email": "acvxqs@icloud.com",
+            "homepage": "https://sroelse.nl",
+            "role": "Developer"
+        }
+    ],
     "license": "MIT",
     "autoload": {
         "psr-4": {
@@ -15,14 +29,12 @@
             ]
         }
     },
-    "authors": [
-        {
-            "name": "Sven Roelse",
-            "email": "acvxqs@icloud.com"
-        }
-    ],
     "minimum-stability": "dev",
     "require": {
+        "php": ">=7.3",
         "laravel/nova": "^3.0"
+    },
+    "config": {
+        "sort-packages": true
     }
 }
