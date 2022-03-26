@@ -2,10 +2,6 @@
 
 ## Installation
 
-Update the composer.json file in the root of your laravel (nova) project:
- 
-`composer config repositories.nova-registerpage '{"type": "vcs", "url":"https://github.com/acvxqs/nova-registerpage"}' --file composer.json`
-
 Install the package:
 
 `composer require acvxqs/nova-registerpage`
